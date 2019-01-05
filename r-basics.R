@@ -67,6 +67,7 @@ class(t) # -> character
 typeof(t) # -> character
 
 # logical variables
+#TRUE is 1 and FALSE i 0
 
 m <- TRUE
 
@@ -75,10 +76,23 @@ N <- FALSE
 class(m) # -> logical
 typeof(N) # -> logical
 
+m + N
+m - N
+m * N # etc...
+m / N 
 
+# variables and everything is case sensitive
 
+X <- 100
 
-
+# list of variables
+ls()
+# remove variable
+rm(x)
+# remove 2 or more variables
+rm(y,z)
+# remove all variable
+rm(list=ls())
 
 
 
