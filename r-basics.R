@@ -204,6 +204,74 @@ z
 
 typeof(z)
 
+# create vectors with a rep() function
+
+# with rep() we create vectors with replicated values
+
+# we must specify the value and the number of times to replicate it
+
+x <- rep(5, 3)
+x
+
+y <- rep("ab", 6)
+y
+
+# We can combine rep() with c() to replicate an entire vector
+
+z <- rep(c(1, 2, 3),5)
+z
+
+# to replicate the vector element-wise we use the each argument
+
+w <- rep(c(1, 2, 3), each = 5)
+w
+
+# using colon operator
+
+q <- rep(2:5, 3)
+q
+
+# to repeat the sequence element-wise
+
+s <- rep(2:5, each = 3)
+s
+
+# other funcs that replicate values
+# the func numeric() will get us a vector of zeros
+
+t <- numeric(4)
+t
+
+# the func character() will get us a vector of empty strings
+
+k <- character(4)
+k
+
+
+#the function logical() will get us a vector of FALSE values
+
+u <- logical(4)
+u
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
