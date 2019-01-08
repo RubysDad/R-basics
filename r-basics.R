@@ -253,6 +253,72 @@ k
 u <- logical(4)
 u
 
+# Creating vectors with the seq() function
+
+# the seq() function creates sequences of real numbers
+# the start value, the end value and the step (distance between components)
+# the default step is 1 (step i.e. interval)
+
+x <- seq(from=1, to=10, by=0.5)
+x
+
+# we dont have to write their names if we enter the arguments in the right order (start, stop, step)
+
+y <- seq(1, 10, 0.5)
+y
+
+z <- seq(0, 20, 2)
+z
+
+w <- seq(1, 10, 2)
+w
+
+# sequences in reversed order using a negative step
+
+t <- seq(11, 1, -2)
+t
+
+# instead of specifying the step, we can specify the number of components
+# in the sequence (the program will compute the step)
+# we indicate the number of components using the length argument
+
+# create a sequence of 10 numbers between 1 and 5
+# the step is computed by dividing the difference between the stop and stop values
+# to the number of components minus one
+
+# in this case, the step is (5-1)/9 = 0.4444
+
+q <- seq(1, 5, length = 10)
+q
+
+# create a seq of 100 numbers from -3 to 25
+
+# the step is (25+3)/99 = 0.282828
+
+x <- seq(-3, 25, length = 100)
+x
+
+# we can combine the seq() function with c() and rep()
+
+y <- c(seq(1,10, length=5), 30, 40)
+y
+
+z <- rep(seq(1, 3, 0.5), 3) 
+z # => 1.0 1.5 2.0 2.5 3.0 1.0 1.5 2.0 2.5 3.0 1.0 1.5 2.0 2.5 3.0
+
+w <- rep(seq(1, 3, 0.5), each= 3)
+w # => 1.0 1.0 1.0 1.5 1.5 1.5 2.0 2.0 2.0 2.5 2.5 2.5 3.0 3.0 3.0
+
+
+
+
+
+
+
+
+
+
+
 
 
 
