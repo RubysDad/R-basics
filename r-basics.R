@@ -94,5 +94,123 @@ rm(y,z)
 # remove all variable
 rm(list=ls())
 
+# a vector is a sequence of elements of the same type: numeric, character (string) or logical
+
+# c stands for concatenate. and the characters are the parameters to the c function
+
+x = c(10, 20, 30, 40, 50)
+
+x
+
+# the elements of a vector are called components
+
+class(x)
+
+typeof(x)
+
+# a character vector
+
+y <- c("a", "b", "c")
+
+y
+
+class(y)
+
+typeof(y)
+
+# a vector of logical values
+
+z <- c(TRUE, FALSE, FALSE, TRUE)
+
+z
+
+class(z)
+typeof(z)
+
+# a vector with components of different types. If you create a vector with components of different types
+# all of the components will be converted into strings
+
+h <- c(1, 2, "a", "b", TRUE, FALSE)
+h
+
+class(h)
+typeof(h)
+
+# get a vector length (number of components)
+
+length(x)
+length(y)
+length(z)
+
+# we can add values to an existing vector
+
+x <- c(x, 100)
+x
+
+# if we nest two or more c() functions the result is one vector only
+
+w <- c(c(1, 2, 3), 25)
+w
+
+s <- c(c(2, 4, 6), c(10, 12, 14))
+s
+
+# creating vectors with the colon operator
+# the colon operator helps us create sequences of integers
+
+x <- 1:5
+x
+
+class(x)
+typeof(x)
+
+# another vector with the same values, using the c() func
+
+y <- c(1, 2, 3, 4, 5)
+y
+
+class(y)
+typeof(y)
+
+# create a sequence in desc order
+
+z <- 10:1
+z
+
+class(z)
+typeof(z)
+
+#we can also use variables with the colon operator
+
+i <- 3
+
+j <- 7
+
+k <- i:j
+k
+
+class(k)
+typeof(k)
+
+#we can combine the colon operator with the c() func
+
+w <- c(3:9, 70)
+w
+
+typeof(w)
+
+z <- c(1:10, 20:-5)
+z
+
+typeof(z)
+
+
+
+
+
+
+
+
+
 
 
