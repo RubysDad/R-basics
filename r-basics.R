@@ -309,22 +309,53 @@ z # => 1.0 1.5 2.0 2.5 3.0 1.0 1.5 2.0 2.5 3.0 1.0 1.5 2.0 2.5 3.0
 w <- rep(seq(1, 3, 0.5), each= 3)
 w # => 1.0 1.0 1.0 1.5 1.5 1.5 2.0 2.0 2.0 2.5 2.5 2.5 3.0 3.0 3.0
 
+# Vectors of random numbers
+# useful in simulations and other statistical applications
 
+# create a vector of discrete random numbers with the sample() function
 
+# we must indicate the population and the number of values to be generated(sample)
 
+# generate 12 random numbers from 1 to 100
 
+n <- sample(100, 12) # same as 1:100. (range, number of values in the vector)
+n
 
+# the population can be any vector
 
+h <- 100:300
 
+n <- sample(h, 10)
+n
 
+# replace TRUE can show duplicated values. replace = FALSE is default in the sample() func.
 
+n <- sample(30, 15, replace = TRUE)
+n
 
+# if the sample is greater than the population 
+# the replace option must be set to TRUE e.i sample(100, 300)
 
+m <- sample(10, 50, replace = TRUE)
+m
 
+# generating vectors of continuous random numbers
+# using a few common statistical distributions 
 
+# to generate a vector of random numbers with a normal distribution we use the rnorm() function
 
+# we must specify the number of values (trials), mean and standard deviation
+# by default, mean is equal to 0 and standard deviation to 1
 
+x <- rnorm(100, 10, 5) # => (100 numbers, 10, standard deviation of 5)
+x
 
+x <- rnorm(100)
+x
+
+# runif function - to generate a vector of uniform random numbers
+# specify the number of trials and the range (lower and upper limit)
+# by default, range is 0-1
 
 
 
