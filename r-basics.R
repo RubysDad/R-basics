@@ -345,20 +345,32 @@ m
 # to generate a vector of random numbers with a normal distribution we use the rnorm() function
 
 # we must specify the number of values (trials), mean and standard deviation
+# standard deviation - how spread out the data is
+# low standard deviation is where the data is closely clustered around the mean or average
+# high standard deviation means that the data is dispersed over a wide range of values
 # by default, mean is equal to 0 and standard deviation to 1
 
-x <- rnorm(100, 10, 5) # => (100 numbers, 10, standard deviation of 5)
+x <- rnorm(100, 10, 5) # => (100 numbers, mean of 10, standard deviation of 5)
 x
 
-x <- rnorm(100)
+x <- rnorm(100) # => same as (100, 0, 1) which is the default
 x
 
 # runif function - to generate a vector of uniform random numbers
 # specify the number of trials and the range (lower and upper limit)
 # by default, range is 0-1
 
+y <- runif(100, 1, 5) # => (100 numbers, 1 lowest number, 5 highest number)
+y
 
+# to generate a vector of exponential random numbers
+# We use the rexp() function
 
+# we must specify the number of trials and the rate (1/mean)
+# (100 numbers, rate)
+
+z <- rexp(100, 1/50)
+z
 
 
 
