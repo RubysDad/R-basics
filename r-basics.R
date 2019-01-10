@@ -408,7 +408,113 @@ z
 typeof(z)
 
 ###
+# Indexing vectors using numeric indices
 
+# indexing a vector means accessing the vectors components
+
+# the indices (subscripts) must be put between square brackets
+
+x <- c(10, 20, 30, 40, 50, 60 , 70, 80, 90, 100)
+
+# access one component
+
+x[2]
+
+# access several components
+
+x[c(1,3,8)]
+
+# access components in order
+
+x[2:5] # => 20 30 40 50
+x[5:2] # => 50 40 30 20 
+
+# combine the methods above
+
+x[c(1:4, 7)] # => 10 20 30 40 70
+
+# access last component (when we dont know the length)
+
+x[length(x)] # => 100 gives last component
+
+# we can put the indices in a seperate vector
+
+n <- 3:5
+x[n]
+
+# the negative indices help us to remove a component
+
+#remove one component
+
+x[-2] # => 10 30 40 50 60 etc...
+
+# or several
+
+x[c(-1, -3, -6)] # => 20 40 50 70 80 90 100
+
+#remove components in order
+
+x[-2:-4] # => 10  50  60  70  80  90 100
+
+x[-4:-2] # => 10  50  60  70  80  90 100
+
+# combine methods above
+
+x[c(-1:-5, -9)] # => 60  70  80 100
+
+#removes the last component (when we dont know the length)
+
+x[-length(x)] # => 10 20 30 40 50 60 70 80 90
+
+# cant do x[c(3, -7)] cant mix positive and negative indices
+
+#only zeros can be mixed with negative indices
+
+x[c(0, -7)] #or
+x[-7]
+
+# we can add components to a existing vector or edit components using indices
+
+x <- c(7, 8, 9, 10)
+x[5] <- 11 # the index and then the appended number
+x
+
+x[2] <- 100 # => 7 100   9  10  11
+x
+
+# we cannot do this if the vector was not pre-defined
+
+p[1] <- 3
+
+#must define vector first
+
+p <- c()
+p[1] <- 3
+p[2] <- 7
+p
+
+# to insert a component into an existing vector we must "break" the vector
+
+x <- c(9, 10, 11, 12)
+
+# we want to insert 50 between 11 and 12
+
+x <- c(x[1:3], 50, x[4])
+x
+
+
+# index vectors using logical indices
+
+x <- c(1, 2, 3, 4, 5)
+
+i <- c(FALSE, TRUE, TRUE, FALSE)
+x[i]
+
+# we can do this directly as well
+
+x[c(FALSE, TRUE, TRUE, FALSE)]
+
+####
 
 
 
