@@ -372,18 +372,42 @@ y
 z <- rexp(100, 1/50)
 z
 
+# creating empty vectors
 
+# in some cases we need to initialize a vector before using it, like with loops
 
+x <- c()
+x
 
+typeof(x)
+length(x)
 
+y <- NULL
+y
 
+typeof(y)
 
+z <- vector() # will get us a logical empty vector
+z
 
+typeof(z)
 
+# to add values to the empty vectors
 
+x <- c(x, 1, 2)
+x
 
+typeof(x)
 
+y <- c(y, 1, 2)
+y
 
+z <- c(z, 1, 2)
+z
+
+typeof(z)
+
+###
 
 
 
