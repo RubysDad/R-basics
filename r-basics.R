@@ -515,9 +515,26 @@ x[i]
 x[c(FALSE, TRUE, TRUE, FALSE)]
 
 ####
+# Naming Vector components
 
+salary <- c(4000, 2700, 3200)
 
+names(salary) <- c("John", "Mark", "Bob")
 
+salary # => John Mark  Bob 
+#           4000 2700 3200
 
+salary["Mark"] # to select the component and see his salary
 
+# to remove names we assign the null value to the names func
+
+names(salary) <- NULL
+salary
+
+movie_ratings <- c("PG", "PG", "PG13")
+names(movie_ratings) = c("God's not Dead", "Sense and Sensibility", "Holes")
+movie_ratings
+
+movie_ratings[1]
+movie_ratings["God's not Dead"]
 
