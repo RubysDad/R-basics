@@ -538,3 +538,66 @@ movie_ratings
 movie_ratings[1]
 movie_ratings["God's not Dead"]
 
+# filtering vectors
+
+# vector filtering (or slicing) is the operation of selecting the components that meet one or more conditions
+# the filtering conditions must be put between square brackets
+
+x <- c(10, 20, 30, 40, 50, 60, 70, 80, 90 , 100)
+
+# select the components that are greater than 45
+
+y <- x[x>45]
+y
+
+y <- x[x<72]
+y
+
+y <- x[x==30]
+y
+
+y <- x[x!=30]
+y
+
+y <- x[x > 27 & x < 83]
+y
+
+y <- x[x < 35 | x > 71]
+y
+
+y <- x[x < 60 | x > 20]
+y
+
+y <- x[x > 20 & x != 80]
+y
+
+y <- x[x > 20 | x != 80]
+y
+
+# to find out the indices of the components that meet a condition we can use the which() function
+
+which(x==40) # => 4 . The fourth component of the vector
+
+which(x < 54)
+
+which(x > 43)
+
+# we can store these indices in a vector to use them later
+
+i <- which(x > 43)
+i
+
+# to check whether a value can be found in a vector we can use the binary operator %in%
+
+40 %in% x # => TRUE
+
+86 %in% x # => FALSE
+
+####
+
+
+
+
+
+
+
