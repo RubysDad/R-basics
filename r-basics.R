@@ -645,4 +645,61 @@ any(x<4|x>9)
 any(x<0|x>100)
 
 
+# Sum and Product of vector componenta
+# Basic statistical indicators
+
+x <- c(2,4,6,15,17,19)
+
+# to add the components of a numeric vector
+
+sum(x)
+
+y <- sum(x)
+y
+
+# to multiply the components
+prod(x)
+
+# to compute the cumulative sum => 2  6 12 27 44 63. ex. 2, 4+2=6,6+2=12,12+15=27, etc... 
+cumsum(x)
+
+# to compute the cumulative product =>  2 8 48 720 12240 232560. ex. 2, 4*2=8,6*8=48,15*48=720, etc...
+cumprod(x)
+
+mean(x) # => 10.5
+
+median(x)
+
+# to get the variance
+var(x)
+
+#to get the standard deviation
+sd(x)
+
+# to get the statitics for a numeric vector
+
+summary(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
