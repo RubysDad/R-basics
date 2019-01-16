@@ -595,9 +595,54 @@ i
 
 ####
 
+# all() checks whether all the components in a vector meet a certain condition
+# the result is either true or false
+
+x <- c(1,3,5,7,9,11,13,15)
+
+# check whether all the components are greater than zero
+
+all(x>0)
+
+all(x<50)
+
+all(x<8)
+
+all(x>10)
+
+# two conditions
+
+all(x>0&x<10)
+
+all(x>0&x<35)
+
+all(x>0|x<7) # since one condtion is satified then it returns true
+
+all(x>4|x<7) #  => True because any component is either greater than four or less than 7
+
+all(x>4|x<2) # => False because 3 is not lower than two or greater than 4
 
 
+# any() is a func that checks whether any component in a vector meets a certain condition
 
+x
+
+# Is there any component greater than 4?
+any(x>4)
+
+any(x<0)
+
+any(x==11)
+
+any(x==4)
+
+any(x<10&x>3)
+
+any(x<4&x>9)
+
+any(x<4|x>9)
+
+any(x<0|x>100)
 
 
 
