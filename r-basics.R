@@ -680,20 +680,98 @@ sd(x)
 
 summary(x)
 
+# vectorized operations
+# operations that apply to all of the components in a vector simultaneously (in parallel)
+
+# this is very effective feature of R and saves from writing a lot of loops
+# vectorized operations are actually loops
+
+# the result of a vectorized operation is a vector
+
+#here's the main vectorized operations
+
+# adding a vector to a scalar
+
+x <- c(1,2,3,4,5)
+
+y <- x + 10
+y
+
+# multiplying a vector bya scalar
+y <- x * 3
+y
+
+# computing the modulo values of the components
+# the remainders from dividing each component to a scalar
+
+y <- x %% 2 # => 1 0 1 0 1
+y
+
+# raising  the vector components at a power # g(x) = x3
 
 
+y <- x ^ 2 
+y
+
+# exponentiate each component # ex. f(x) = 3x
+
+exp(x) 
+
+# extraction of a square root
+
+sqrt(x)
+
+x ^ (1/2) # the same
+
+# the extraction of any root
+
+x ^ (1/3)
+
+# compute the natural logarithm ex. 2(4)=16⟺log 2(16)=4  log base two of sixteen is four"
+log(x)
+
+# trigonometrical functions (sin, cos, etc.)
+
+sin(x)
+
+cos(x)
 
 
+# to compute the absolute value
 
+abs(x)
 
+# round the vector components
 
+z <- c(1.3, 3.7, 9.5)
 
+round(z)
 
+# round to the closets lower integer
 
+floor(z)
 
+# round to the closets higher integer
 
+ceiling(z)
 
+# round to the specified number of significant digits
+# using the signif() function
+# we have to specify the vector and the number of digits
 
+w <- c(3.954, 7.200, 9.028)
+
+signif(w, 1) # => 4, 7, 9
+
+signif(w ,2)
+ # => 4.0 7.2 9.0
+
+signif(w, 3)
+# => 3.95, 7.20, 9.03
+
+# compute the factorial of each component
+
+factorial(x) # ex. 4! = 4 × 3 × 2 × 1 = 24
 
 
 
