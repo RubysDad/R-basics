@@ -825,13 +825,31 @@ sort(q) # ascending order -> FALSE FALSE  TRUE  TRUE
 
 sort(q, decreasing = TRUE) # -> TRUE  TRUE FALSE FALSE
 
-###
+### Minimum and Max values in a vector
 
+x <- c(4,1,7,5,12,6)
 
+min(x)
 
+max(x)
 
+# to determine the indices of the minimum and maximum values
 
+which.min(x) # => 2
 
+which.max(x) # => 5
+
+# pmin() and pmax() allow us to determine the minima and maxima from pairs of vector values.
+
+x
+
+y <- c(2,9,7,6,10,14)
+y
+
+# it compares (x: 4 with y:2 and 2 is the lowest)
+pmin(x,y) # => 2  1  7  5 10  6
+
+pmax(x,y) # => 4  9  7  6 12 14
 
 
 
