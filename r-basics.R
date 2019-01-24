@@ -773,6 +773,63 @@ signif(w, 3)
 
 factorial(x) # ex. 4! = 4 × 3 × 2 × 1 = 24
 
+# missing values in vectors, NA symbol
+
+sal <- c(3500, 2800, 2400, NA, 2900)
+
+mean(sal) # -> NA
+
+sal2 <- na.omit(sal) # -> removes it
+sal2
+mean(sal2)
+
+#easier way to do it
+
+mean(sal, na.rm = TRUE)
+
+# the missing values count for the vector length
+
+length(sal)  # -> 5 values(including missing values)
+
+# to identify the missing values we can use the function is.na()
+
+y <- is.na(sal)
+y # -> FALSE FALSE FALSE  TRUE FALSE fourth component is the missing value
+
+### Sorting vectors
+
+x <- c(6,8,3,11,5,10,2,17)
+
+sort(x) # orders in ascending order
+x
+
+y <- sort(x)
+y # -> 1 2 3 4 5
+
+# to get the order of indices we can use the order() function
+
+order(x) # -> 7 3 5 1 2 6 4 8
+
+y <- sort(x, decreasing = TRUE) # orders in descending order
+y
+
+# sort characters and logical vectors too
+
+w <- c("2", "a", "n", "d")
+sort(w) # -> "2" "a" "d" "n"
+
+sort(w, decreasing = TRUE) # -> "n" "d" "a" "2"
+
+q <- c(TRUE, FALSE, TRUE, FALSE)
+sort(q) # ascending order -> FALSE FALSE  TRUE  TRUE
+
+sort(q, decreasing = TRUE) # -> TRUE  TRUE FALSE FALSE
+
+###
+
+
+
+
 
 
 
