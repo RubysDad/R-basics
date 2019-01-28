@@ -851,6 +851,41 @@ pmin(x,y) # => 2  1  7  5 10  6
 
 pmax(x,y) # => 4  9  7  6 12 14
 
+#### conditionals
+
+# ifelse(condition, action if true, action if false)
+
+x <- c(6, 10, 9, 5, 20, 7, 16)
+
+y <- ifelse(x%%2==0, x/2, x)
+y # => 3  5  9  5 10  7  8
+
+x <- c(2,6,15,10,20,14)
+y <- ifelse(x<=12, x*5, x*3)
+y # => 10 30 45 50 60 42
+
+x <- c(25, -36, 100, 0, -1, 49, 4, -68)
+y <- ifelse(x>=0, sqrt(x), sqrt(-x))
+y # => 5.000000  6.000000 10.000000  0.000000  1.000000  7.000000  2.000000  8.246211
+
+# to remove warnings to this:
+
+y <- sqrt(ifelse(x>=0, x, -x))
+y
+
+x <- c(15, 6, 10, 30, 4)
+y <- ifelse(x^2>100, 1, 0)
+y # => 1 0 0 1 0
+
+
+
+
+
+
+
+
+
+
 
 
 
