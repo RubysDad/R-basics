@@ -877,12 +877,29 @@ x <- c(15, 6, 10, 30, 4)
 y <- ifelse(x^2>100, 1, 0)
 y # => 1 0 0 1 0
 
+### Adding and Multiplying vectors
 
+X <- c(2,4,6,8)
+y <- c(10,20,30,40)
+z <- X + y
+z
 
+X-y
+X * y
+X / y
+y / X
+X %% y
+y %% X
 
+# if vectors have different lengths the shorter vector is recycled 
 
+x <- c(1,2,3,4)
+y <- c(9,10)
+x + y # => 10 12 12 14 , ("1+9, 2+10, 3+9, 4+10")
 
+x * y # => 9 20 27 40
 
+y %% x # => 0 0 0 2
 
 
 
