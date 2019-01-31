@@ -901,6 +901,81 @@ x * y # => 9 20 27 40
 
 y %% x # => 0 0 0 2
 
+## Testing vector equality
+
+x <- c(7,10,3,9,6)
+
+y <- c(2,14,5,15,6)
+
+x > y # => TRUE FALSE FALSE FALSE FALSE
+
+y > x # => FALSE  TRUE  TRUE  TRUE FALSE
+
+y == x # => FALSE FALSE FALSE FALSE  TRUE
+
+y != x # => TRUE  TRUE  TRUE  TRUE FALSE
+
+x <- c(2,4,6)
+y <- c(2,4,6)
+
+all(y == x) # are ALL the components equal to there corresponding component => TRUE
+
+x <- c(7,8,9)
+y <- c(2,4,6)
+
+all(x>y) # => TRUE because all of the components in x are greater than the components in y
+
+all(y>x) # => FALSE
+
+# any function is an alternative
+
+x <- c(4,5,6,8)
+y <- c(2,7,10,8)
+
+# check whether at least one component in x is greater than it's corresponding component in y
+
+any(x>y) # => TRUE i.e. 4 is greater than 2
+
+any(y>x) #=> TRUE 10 is greater than 6
+
+any(x==y) # => TRUE 8 == 8
+
+# identical() is an alternative
+
+x <- c(1,2,3)
+y <- c(1,2,3)
+z <- c(1,2,4)
+
+identical(x, y)
+
+identical(x,z)
+
+# all.equal
+# if the vectors are identical, it returns TRUE
+# if not, it returns the mean difference between components
+
+all.equal(x,y) # => TRUE
+
+all.equal(x,z) # => "Mean relative difference: 0.3333333"
+
+x <- c(4,5,6)
+y <- 4:6
+
+identical(x,y) # => FALSE because they are of different types. x is a double(real numbers). y is integer(whole numbers)
+
+all.equal(x,y) # => TRUE because it's only interested in the values and not the vectors type
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
