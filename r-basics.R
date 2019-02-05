@@ -965,14 +965,61 @@ identical(x,y) # => FALSE because they are of different types. x is a double(rea
 
 all.equal(x,y) # => TRUE because it's only interested in the values and not the vectors type
 
+### creating matrices with the matrix function
 
+# a matrix is a collection of data elements of the same type
+# arranged in a two-dimensional rectangle
 
+# to create a matrix we must indicate the elements, 
+# as well as the number of rows (nrow) and columns (ncol)
 
+m <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+m
 
+# by default, any matrix is created column-wise
+#to change that we set the byrow option to TRUE
 
+m <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3, byrow = TRUE)
+m
 
+# don't need to specify both rows and columns, we can do just one of them
+# the number of elements must be a multiple of the number of rows or columns
 
+m <- matrix(c(1,2,3,4,5,6), nrow = 2)
+m
+#Same result as above
+m <- matrix(c(1,2,3,4,5,6), ncol = 3)
+m
 
+m2 <- matrix(c(1,2,3,4,5,6,7), nrow = 2) # => error
+
+class(m) # => matrix
+
+typeof(m) # => double
+
+# matrix dimensions
+
+dim(m) # => 2 3
+
+nrow(m) # => 2
+
+ncol(m) # => 3
+
+m <- matrix(1:12, nrow = 4, byrow = TRUE)
+m
+
+typeof(m) # => integer because we used the colon operator
+
+m <- matrix(rep(8,9), nrow = 3) # rep 8 nine times
+m
+
+m <- matrix(seq(1,5,length=20), nrow = 5, byrow = TRUE)
+m
+
+m <- matrix(rnorm(20), nrow = 5, byrow = TRUE) # mean 0, standard deviation of 1
+m
+
+# you can create matrices containing character or logical data elements
 
 
 
