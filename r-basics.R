@@ -1021,8 +1021,53 @@ m
 
 # you can create matrices containing character or logical data elements
 
+### rbind() and cbind() allow us to bind vectors in order to create a matrix
 
+# these vectors must have the same length
 
+x <- c(1,2,3,4)
+
+y <- c(10,11,12,13)
+
+z <- c(20,30,40,50)
+
+# if we use the rbind func, our vectors will be in rows
+
+m <- rbind(x,y,z) # 1  2  3  4
+                  # 10 11 12 13
+m                 # 20 30 40 50
+
+class(m) # => matrix
+
+typeof(m) # => double
+
+# we can bind the vectors in any order 
+
+m <- rbind(y,z,x)
+m
+
+# we can bind the same vector several times
+
+m <- rbind(x,y,x,z)
+m
+
+# we can enter in the vectors directly into the rbind func
+
+m <- rbind(c(1,2,3), c(7,8,9), c(21,22,23))
+m
+
+# if we use cbind() the vectors will be in columns
+
+m <- cbind(x,y,z) # 1 10 20
+m                 # 2 11 30
+                  # 2 12 40
+                  # 4 13 50
+
+class(m) # => matrix
+
+typeof(m) # => double
+
+###
 
 
 
