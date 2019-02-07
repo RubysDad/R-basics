@@ -1067,7 +1067,41 @@ class(m) # => matrix
 
 typeof(m) # => double
 
-###
+### Name matrices rows and columns
+
+# dimnames option
+
+m <- matrix(c(1,2,3,4,5,6), nrow = 2,
+            dimnames = list(c("row1", "row2"), c("col1", "col2", "col3")))
+
+m
+
+#      col1 col2 col3
+# row1    1    3    5
+# row2    2    4    6
+
+# alternatively we can name stuff after creating the matrix using rownames() and colnames()
+
+m <- matrix(c(1,2,3,4,5,6), nrow = 2)
+
+m
+
+rownames(m) <- c("row1", "row2")
+m
+
+colnames(m) <- c("col1", "col2", "col3")
+m
+
+# to remove names
+
+rownames(m) <- NULL
+
+m
+
+colnames(m) <- NULL
+m
+
+
 
 
 
