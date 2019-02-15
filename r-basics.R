@@ -1102,6 +1102,85 @@ colnames(m) <- NULL
 m
 
 
+### indexing matrices
+
+# means accessing one or several matrix elements
+
+# indices must be put between square brackets
+
+# we must use two indices: one for the row and the other for the column
+
+m <- matrix(1:16, nrow = 4, byrow = TRUE)
+m
+
+# access element on row 2, column 3
+
+m[2,3]
+
+m[4,1]
+
+c(m[2,2], m[4,3]) # to get two of them
+
+m[2,] # to access the whole row 2 => 5 6 7 8
+
+# we can put the elements in this row in a vector
+
+x <- m[2,]
+x
+
+# access entire column
+
+m[,3]
+
+# access elements on row 2 and columns 2,3,4
+
+m[2, 2:4]
+m
+
+# to access the elements on column3, rows 1 and 4
+
+m[c(1,4),3]
+
+# to access the elements on rows 2 and 4 and columns 2 and 4
+
+m[c(2,4), c(2,4)]
+
+# access the elements on rows 2,3,4 and columns 3 and 4
+
+m[2:4, 3:4]
+
+# access the elements at the intersection of rows 1, 2 with columns 1,2.
+# and the elements at the intersection or rows 3,4 with columns 3 and 4
+
+c(m[1:2, 1:2], m[3:4, 3:4])
+
+# access fifth element in column-wise order
+
+m[5] #=> 2
+
+# to access fifth and seventh element
+
+m[c(5,7)] # => 2 10
+
+# 5, 6, 7 element
+
+m[5:7]
+
+# to remove elements using negative indices
+#access the row 2 less the element on the third column
+
+m[2,-3] # => 5,6,8
+
+# row 4, remove elements in on 2 and 4 column
+m[4, c(-2, -4)] # => 13 15
+
+# remove top row
+m[2:4, -1]
+
+
+
+
+
 
 
 
