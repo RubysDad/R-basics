@@ -1177,13 +1177,72 @@ m[4, c(-2, -4)] # => 13 15
 # remove top row
 m[2:4, -1]
 
+### Filtering Matrices
 
+# means accessing elements that meet a certain condition
 
+# create a 4 by 4 matrix of 16 discrete random numbers between 1 to 100
 
+i <- sample(100, 16, replace = TRUE)
 
+m <- matrix(i, nrow = 4, byrow = TRUE)
+m
 
+# filter
 
+m[m>50] # => 52 70 70 87 91
 
+m[m<70] # => 43 11 43 23 23  8 13 27 52 11  8 40
+
+m[m<70&m>30]
+
+m[m>70|m<20] # meet any of these conditions
+
+m[m==43]
+
+m[m==99|m<30]
+
+# to find out the indices of the elements that meet a condition we use the which() func
+
+which(m==43) # => 1 3 
+
+which(m>50) # => 9 11 12 14 16
+
+# Editing elements in Matrices
+
+m <- matrix(1:16, nrow = 4, byrow = TRUE)
+ 
+# assign the value 100 to the element on row 3, column 4
+
+m[3,4] <- 100
+m
+
+m[7] <- 100 # column-wise
+m
+
+m[1, 2:4] <- 100 # assign 100 to elements on row 1, columns 2,3,4
+m
+
+# assign column 0 to entire second row
+
+m[2,] <- 0
+m
+
+# assigning mulitple values
+
+m[1, 2:4] <- c(31,32,33)
+m
+
+# assign values to entire third column
+
+m[,3] <- 51:54
+m
+
+m[c(7,9)] <- c(1000, 2000) 
+m                         # 1   31 2000   33
+                          # [2,]    0    0   52    0
+                          # [3,]    9 1000   53  100
+                          # [4,]   13   14   54   16
 
 
 
