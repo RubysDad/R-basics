@@ -1239,11 +1239,87 @@ m[,3] <- 51:54
 m
 
 m[c(7,9)] <- c(1000, 2000) 
-m                         # 1   31 2000   33
+m                         #         1   31 2000   33
                           # [2,]    0    0   52    0
                           # [3,]    9 1000   53  100
                           # [4,]   13   14   54   16
 
+### Adding and deleting columns from a matrix
+
+m <- matrix(1:16, nrow = 4, byrow = TRUE)
+m
+
+# to add rows use rbind()
+
+m <- rbind(m, c(50,60,70,80))
+
+# the vector length must be equal to the number of columns in the matrix
+
+m
+
+alternatively
+
+x <- c(8,10,12,14)
+m <- rbind(m,x)
+m
+
+# to remove the vector name from the row
+rownames(m) <- NULL
+
+m
+
+m2 <- matrix(21:28, nrow = 2, byrow = TRUE)
+m2
+
+m <- rbind(m, m2)
+m
+
+# to add columns in a matrix we use cbind()
+
+m <- matrix(1:16, nrow = 4,  byrow = TRUE)
+m
+
+m <- cbind(m, c(100,101,102,103))
+m
+
+# the vector length must be equal to the number of rows in the matrix
+
+# We can use the cbind() to bind two or more matrices
+# these matrices must have the same number of rows
+
+m2 <- matrix(51:58, nrow = 4, byrow = TRUE)
+m2
+
+m <- cbind(m, m2)
+m # the last two columns were added to matrix m
+
+# to remove rows and columns we simply use negative indices
+
+m <- matrix(1:16, nrow = 4, byrow = TRUE)
+
+m1 <- m[-2,] # to remove 2nd row
+m1
+
+# to remove 1st column
+
+m1 <- m[,-1]
+m1
+
+# to remove first and third row
+m1 <- m[c(-1,-3),]
+m1
+
+# to remove first and third column
+m1 <- m[,c(-1,-3)]
+m1
+
+# to remove first, second and third row
+m1 <- m[-1:-3,]
+m1
+
+# to remove first, second and third column
+m1 <- m[,-1:-3]
+m1
 
 
 
