@@ -1322,4 +1322,62 @@ m1 <- m[,-1:-3]
 m1
 
 
+### Minima and Maxima
+
+i <- sample(100,20)
+
+m <- matrix(i,nrow = 4, byrow = TRUE)
+m  
+
+# get minimum and maximum value, overall
+min(m)  
+  
+max(m)
+
+min(m[3,])  # minimum value of the third row
+
+max(m[,4]) # maximum value in the fourth column
+
+# to get the indices of the minimum and maximum values we use 
+# the funcs which.min() and which.max()
+
+# the indices of the overall minimum and maximum values
+
+m
+
+which.min(m)
+
+which.max(m)
+  
+#the index of the minimun value of the third row
+
+which.min(m[3,]) # lowest number within the row
+  
+which.max(m[,5])# highest number within the column
+
+# we can use the pmin() and pmax() to get the minima and maxima 
+# for pairs of rows and columns
+
+# get the minima for the rows 2 and 3
+
+pmin(m[2,], m[3,])
+
+# get the max for the rows 2 and 3
+
+pmax(m[2,],m[3,])
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
 
