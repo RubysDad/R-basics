@@ -1366,18 +1366,35 @@ pmin(m[2,], m[3,])
 
 pmax(m[2,],m[3,])
 
+### Applying Functions to matrices
 
+# the arguments of the apply function are:
+# the matrix name
+# the dimension we apply the function to (1 for rows, 2 for columns)
+# the function to apply
 
+# create a 4x4 matrix
 
+m <-matrix(1:16, nrow = 4)
+m
 
+# compute the sum of the elements on each row and column, respectively
 
+apply(m, 1, sum)
 
+apply(m, 2, sum)
 
+apply(m, 1, prod)
 
+apply(m, 2, prod)
 
+apply(m, 1, mean)
 
+apply(m, 2, mean)
 
-  
+apply(m, 1, sd) # standard deviation
+
+apply(m,2, sd)  
   
 
 
