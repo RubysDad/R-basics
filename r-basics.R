@@ -1395,6 +1395,65 @@ apply(m, 2, mean)
 apply(m, 1, sd) # standard deviation
 
 apply(m,2, sd)  
-  
+
+# to compute the cumulative sums for the data values in each row
+apply(m, 1, cumsum)
+
+# the cumsums are computed my row, but the matrix is built column-wise( R default)
+
+# to build the same matrix row-wise we have to use the matrix() func
+
+m1 <- matrix(apply(m, 1, cumsum), nrow = 4, byrow = TRUE)
+m1
+
+# compute the cumlative sums for each column
+
+m
+
+apply(m, 2, cumsum) # the cumsums are computed by columns and the matrix is built column-wise
+
+m
+
+# square roots, first row's square roots are in the first column, etc... because R builds the matrix column-wise
+apply(m, 1, sqrt)
+
+# compute the natural logarithms by row
+apply(m, 1, log)
+
+# compute the natural antilogarithms by row
+apply(m, 1, exp)
+
+# to get row-wise matrix using the sqrt func
+
+m1 <- matrix(apply(m, 1, sqrt), nrow = 4, byrow = TRUE)
+m1
+
+# to get row-wise matrix using the log func
+
+m1 <- matrix(apply(m, 1, log), nrow = 4, byrow = TRUE)
+m1
+
+# the same happens when we use a custom function applied by row
+
+f <- function (x) { 2*x + 3 }
+m
+
+apply(m, 1, f) # data is set column-wise. Data in 2nd column is from the 2nd row of matrix m which is the (x) for the f function
+
+m1 <- matrix(apply())
+
+# to get a row-wise matrix
+
+m1 <- matrix(apply(m, 1, f), nrow = 4, byrow = TRUE) 
+m1
+
+
+# with cumsum, log, exp, sqrt, sin, cos by column then no problems arise
+
+# to get the matrix row-wise with these funcs you have to use the matrix() function
+
+
+
+
 
 
