@@ -1498,6 +1498,30 @@ sweep(m, 2, c(10,20,30,40), "*")
 
 sweep(m, 2, c(10,20,30,40), "/")
 
+### add or multiply matrices
+
+m1 <- matrix(1:9, nrow = 3, byrow = TRUE)
+
+m2 <- matrix(101:109, nrow = 3, byrow = TRUE)
+
+m <- m1 + m2
+m
+
+m <- m1 * m2
+m
+
+# use %*% to perform real matrix multiplication
+
+m1 <- matrix(1:15, nrow = 3, byrow = TRUE) 
+
+m1
+
+m2 <- matrix(1:20, nrow = 5, byrow = TRUE)
+
+m2
+
+m <- m1 %*% m2
+m # the result is a 3x4 matrix
 
 
 
