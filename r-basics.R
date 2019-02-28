@@ -1452,6 +1452,55 @@ m1
 
 # to get the matrix row-wise with these funcs you have to use the matrix() function
 
+### sweep()
+
+m <- matrix(1:12, nrow = 3, byrow = TRUE)
+
+
+# for the sweep() function we must specify:
+
+# the data source (our matrix)
+# the dimension (1 for rows, 2 for columns)
+# the vector of values (its length must be equal to the number of columns/rows)
+# a binary operator between quotation marks: "+", "-", "=", or "/"
+
+# add 10, 20, and 30 to each row, respectively
+
+sweep(m, 1, c(10,20,30), "+")
+
+# subtract 10, 20, and 30 to each row, respectively
+
+sweep(m, 1, c(10,20,30), "-")
+
+
+# multiply 10, 20, and 30 to each row, respectively
+
+sweep(m, 1, c(10,20,30), "*")
+
+
+# divide 10, 20, and 30 to each row, respectively
+
+sweep(m, 1, c(10,20,30), "/")
+
+# add 10, 20, and 30 to each column, respectively
+
+sweep(m, 2, c(10,20,30, 40), "+")
+
+# subtract 10, 20, and 30 to each column, respectively
+
+sweep(m, 2, c(10,20,30,40), "-")
+
+# multiply 10, 20, and 30 to each column, respectively
+
+sweep(m, 2, c(10,20,30,40), "*")
+
+# divide 10, 20, and 30 to each column, respectively
+
+sweep(m, 2, c(10,20,30,40), "/")
+
+
+
+
 
 
 
