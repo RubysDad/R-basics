@@ -1523,7 +1523,53 @@ m2
 m <- m1 %*% m2
 m # the result is a 3x4 matrix
 
+# to transpose a matrix use the t()
 
+M <- matrix(1:20, nrow = 5, byrow = TRUE)
+M
+
+t(M) # now it has 5 columns and 4 rows instead of having 4 columns and 5 rows
+
+# to compute the determinant of a quadratic matrix we use the det() function
+
+m <- matrix(c(2,4,8,12,5,7,9,15,10), nrow = 3, byrow = TRUE)
+
+m
+
+det(m)
+
+m <- matrix(c(2,4,8,12,5,7,9,15,10), nrow = 3, byrow = FALSE)
+m
+
+# to compute the inverse of a quardratic matrix we use the solve()
+# only works if the determinant is different from zero
+
+mi <- solve(m)
+
+mi
+
+m %% mi
+
+# to extract the elements on the main diagonal of a quadratic matrix
+# we use the diag()
+
+m
+
+x <- diag(m)
+x
+
+class(x)# numeric
+
+x <- c(10,12,14,16,18)
+
+diag(x) # creates a table where the components are going in a diagonal
+# line down the table
+
+# to create an identity matrix
+
+# this will create a 5 * 5 identity matrix
+
+diag(rep(1,5)) # replicate the number 1 five times
 
 
 
