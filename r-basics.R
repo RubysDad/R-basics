@@ -1571,6 +1571,95 @@ diag(x) # creates a table where the components are going in a diagonal
 
 diag(rep(1,5)) # replicate the number 1 five times
 
+### Multi-dimensional arrays
+
+# stores several matrices 
+
+# the matrices must have the dame dimension
+
+# 3 brands that sell in two markets
+
+# create a matrix that contain the brands codes and prices in the first market
+
+market1 <- matrix(c(22,44,66,9,12,5), nrow = 3)
+rownames(market1) <- c("brand1", "brand2", "brand3")
+colnames(market1) <- c("code", "price")
+
+market1
+
+market2 <- matrix(c(55,77,66,99,10,5), nrow = 3)
+rownames(market2) <- c("brand1", "brand2", "brand3")
+colnames(market2) <- c("code", "price")
+market2
+
+# the order of the dimensions are rows, columns, layers  example: 3, 2, 2
+
+markets <- array(data=c(market1, market2), dim=c(3,2,2))
+# if we dont specify the dimensions the result will be a vector and not an array
+
+markets2 <- array(data=c(market1, market2))
+markets2  
+
+markets
+
+markets <- array(data=c(market1, market2), dim=c(3,2,2),
+  dimnames = list(c("brand1", "brand2", "brand3"), c("code", "price"), c("smark1", "smark2")))
+
+markets  
+
+dim(markets)  # to get dimensions
+
+dimnames(markets)  # to get dimension names
+
+###  Lists
+
+# a data structure that can contain objects of different types
+  
+# 4 employess. Name, age, gender, annual salary, whether they're managers or not
+  
+employees <- list(names=c("Mark", "Tom", "Laura", "Tabitha"),
+                 age=c(49, 28, 35, 25),
+                 gender=c("m", "m", "f","f"),
+                 salary=c(75000, 62000, 55000, 46000),
+                 manager=c(TRUE, FALSE, FALSE, TRUE))
+employees  
+
+# can create a list without object names as well
+
+employees2 <- list(c("Mark", "Tom", "Laura", "Tabitha"),
+                  c(49, 28, 35, 25),
+                  c("m", "m", "f","f"),
+                  c(75000, 62000, 55000, 46000),
+                  c(TRUE, FALSE, FALSE, TRUE))
+employees2
+
+class(employees)  # => list
+
+typeof(employees)  # => list
+
+# to print list structure
+
+str(employees)
+
+names(employees)
+
+# lists dont have to be the same length
+
+lunch <- list(Tabitha=c("omelette", "fried potatoes"),
+              Aurora=c("salad", "beef steak"),
+              Felix=c("salad", "lasagna", "pancakes"),
+              Ruby= 100) # the bill value
+lunch
+
+str(lunch)
+
+###
+
+
+
+
+
+
 
 
 
