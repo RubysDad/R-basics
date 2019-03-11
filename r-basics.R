@@ -1653,14 +1653,24 @@ lunch
 
 str(lunch)
 
-###
+### Lists with the vector()
 
+employ <- vector(mode = "list") 
+class(employ)
 
+# now add objects to the list
 
+employ[["names"]] <- c("Mark", "Tabs", "Ruby", "Felix")
 
+employ[["age"]] <- c(49,28,35,25)
 
+employ[["gender"]] <- c("m", "f", "f", "m")
 
+employ[["salary"]] <- c(75000, 62000, 55000, 46000)
 
+employ[["manager"]] <- c(TRUE, TRUE, FALSE, FALSE)
+
+employ
 
 
 
