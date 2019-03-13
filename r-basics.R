@@ -1672,6 +1672,50 @@ employ[["manager"]] <- c(TRUE, TRUE, FALSE, FALSE)
 
 employ
 
+### indexing lists. 
+# To access objects we use double brackets
+# To access individual elements we use simple brackets
 
+employees <- list(names=c("Mark", "Tabby", "Felix", "Ruby"),
+                  age=c(27, 31, 3, 4),
+                  gender=c("m", "f", "m", "f"),
+                  salary=c(75000, 62000, 55000, 46000),
+                  manager=c(TRUE, TRUE, FALSE, FALSE))
 
+# to extract the vector of names
 
+employees[["names"]]
+
+x <- employees[["names"]]
+x
+
+class(x)
+typeof(x)
+
+employees[["age"]]
+
+employees[[1]] # to extract the object if it has no name, use the object indices
+
+employees[[5]]
+
+# to access an element. Three ways to do it
+
+employees[["names"]][3]
+employees[[1]][3]
+employees[[c(1,3)]]
+
+employees[["salary"]][2]
+employees[[4]][2]
+employees[[c(4,2)]]
+
+# to get multiple employee salaries
+
+employees[["salary"]][1:3]
+employees[["salary"]][c(1,4)]
+
+# to remove second salary from the list
+employees[["salary"]][-2]
+
+employees[["age"]][-1:-3]
+
+###
