@@ -1718,4 +1718,41 @@ employees[["salary"]][-2]
 
 employees[["age"]][-1:-3]
 
-###
+### Indexing lists using the objects names
+
+employees <- list(names=c("Mark", "Tabby", "Felix", "Ruby"),
+                  age=c(27, 31, 3, 4),
+                  gender=c("m", "f", "m", "f"),
+                  salary=c(75000, 62000, 55000, 46000),
+                  manager=c(TRUE, TRUE, FALSE, FALSE))
+
+employees
+
+# to access the vectors of names, gender and salary
+
+employees$names
+
+employees$gender
+
+employees$salary
+
+# get someones salary
+
+employees$salary[2]
+
+employees$salary[2:4]
+
+# remove elements
+employees$salary[-1]
+
+# create  sub list with ages and salaries only
+emp2 <- list(age=employees$age, salary=employees$salary)
+class(emp2)
+emp2
+
+
+
+
+
+
+
