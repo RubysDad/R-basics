@@ -1750,9 +1750,58 @@ emp2 <- list(age=employees$age, salary=employees$salary)
 class(emp2)
 emp2
 
+# editing lists
+
+employees <- list(names=c("Mark", "Tabby", "Felix", "Ruby"),
+                  age=c(27, 31, 3, 4),
+                  gender=c("m", "f", "m", "f"),
+                  salary=c(75000, 62000, 55000, 46000),
+                  manager=c(TRUE, TRUE, FALSE, FALSE))
+
+employees
 
 
+# change toms salary from 62000 to 64000
+employees[["salary"]][2] <- 64000
+#or
+employees$salary[2] <- 64000
 
+employees[["manager"]][3] <- TRUE
+employees
+
+# change all the salaries
+
+employees[["salary"]] <- c(85000, 75000, 450000, 34000)
+employees
+
+### Adding and removing list objects
+
+employees
+
+# add the number of monthly working hours for each employee
+employees$hours <- c(200, 220, 235, 215)
+employees
+
+employees
+
+#to remove an object
+
+employees$hours <- NULL
+employees
+
+# can add new elements to existing objects
+
+employees[["names"]][5] <- "Felix"
+
+employees[["age"]][5] <- 3
+
+employees[["gender"]][5] <- "m"
+
+employees[["salary"]][5] <- 43000
+
+employees[["manager"]][5] <- FALSE
+
+employees
 
 
 
