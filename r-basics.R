@@ -1803,5 +1803,73 @@ employees[["manager"]][5] <- FALSE
 
 employees
 
+### applying functions to lists
+
+# use lapply()
+
+# can only be used when the elements are of the same type numeric
+
+carspec <- list(engine=c(1.8, 3.2, 3.5, 1.8, 2.8, 4.2),
+                horse=c(140, 225, 210, 150, 200, 310),
+                weight=c(2639, 3517, 3850, 2998, 3561, 3902))
+carspec
+
+# compute average value for each object
+# soecify the list name and the function
+lapply(carspec, mean)
+
+l <- lapply(carspec,mean)
+l
+
+class(l)
+typeof(l)
+
+lapply(carspec, sd)
+
+lapply(carspec, sum)
+
+lapply(carspec, prod)
+
+lapply(carspec, cumsum)
+
+lapply(carspec, cumprod)
+
+lapply(carspec, log)
+
+f <- function (x) { x^2 + 3 * x}
+lapply(carspec, f)
+
+# sapply() is a simplified version of lapply() but it returns a vector and not a list
+
+sapply(carspec, mean)
+
+s <- sapply(carspec, mean)
+class(s)
+typeof(s)
+s
+
+names(s)
+
+s <- sapply(carspec, mean, simplify = FALSE) # now it will return a list
+s
+
+carspec2 <- list(make=c("toyota", "nissan", "ford", "cooper", "bmw", "dodge"),
+                engine=c(1.8, 3.2, 3.5, 1.8, 2.8, 4.2),
+                horse=c(140, 225, 210, 150, 200, 310),
+                weight=c(2639, 3517, 3850, 2998, 3561, 3902))
+carspec2
+
+lapply(carspec2, mean) # error its not numeric or logical
+
+sapply(carspec2, mean) # same error
+
+
+
+
+
+
+
+
+
 
 
