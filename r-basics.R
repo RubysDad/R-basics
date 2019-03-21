@@ -1863,6 +1863,48 @@ lapply(carspec2, mean) # error its not numeric or logical
 
 sapply(carspec2, mean) # same error
 
+### Practical list example
+# Regression Analysis output
+
+# In R, the regression analysis output is actually a list
+
+# I will run a regression analysis to determine whether a car price is influenced
+# by engine size and horse power
+
+# the vector of the dependent variable (price in thousands)
+
+price <- c(21.5, 28.4, 42.0, 23.9, 33.9, 62.0, 26.9, 33.4, 39, 21.9)
+
+# the vectors of the predictors 
+
+engine <- c(1.8, 3.2, 3.5, 1.8, 2.8, 4.2, 2.5, 2.8, 2.8, 3.1)
+
+horse <- c(140, 225, 210, 150, 200, 310, 170, 193, 195, 175)
+
+# fit the regression model
+
+fit <- lm(price~engine+horse) # linear model
+
+# fit is a list
+
+typeof(fit)
+names(fit)
+
+fit$coefficients
+
+fit$coefficients[2] # var engine
+
+fit$coefficients[1]
+
+fit$call
+
+fit$model # prints table format
+
+fit$fitted.values
+
+fit$residuals
+
+###
 
 
 
